@@ -22,22 +22,22 @@ Deletar produtos
 - Banco de dados e gerenciador de banco de dados, neste tutorial utilizaremos o mysqli e o PhpMyadmin do Xampp. Para intalar o Xampp: [Download XAMPP (apachefriends.org)](https://www.apachefriends.org/download.html)
 - Postman  para testar a API (Opcional). Para instalar o Postman: [Download Postman | Get Started for Free](https://www.postman.com/downloads/)
 
-1. Para iniciar, vamos criar um projeto laravel no nosso computador, através do comando 
+### 1. Para iniciar, vamos criar um projeto laravel no nosso computador, através do comando 
 ```
 composer create-project laravel/laravel ecommerce-example-api
 ```
 
-2. Entrar na pasta do projeto pelo terminal
+### 2. Entrar na pasta do projeto pelo terminal
 ```
 cd ecommerce-example-api
 ```
 
-3. Abrir o projeto no editor de código 
+### 3. Abrir o projeto no editor de código 
 ```
 code .
 ```
 
-4. Conectar ao banco de dados no arquivo “.env” da raiz da pasta do laravel 
+### 4. Conectar ao banco de dados no arquivo “.env” da raiz da pasta do laravel 
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -47,12 +47,12 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-5. Criar Model do produto juntamente com a migration, no CMD:
+### 5. Criar Model do produto juntamente com a migration, no CMD:
 ```
 php artisan make:model Produto -m
 ```
 
-6. Adicionar campos ao Schema do produto no arquivo “database/migrations/…create_produtos_table.php”. Aqui o nosso produto terá os atributos, nome, descrição e imagem, além dos campos padrões de id e timestamps:
+### 6. Adicionar campos ao Schema do produto no arquivo “database/migrations/…create_produtos_table.php”. Aqui o nosso produto terá os atributos, nome, descrição e imagem, além dos campos padrões de id e timestamps:
 ```php
     public function up(): void
     {
@@ -67,12 +67,12 @@ php artisan make:model Produto -m
    
 ```
 
-7. Rodar migration, após isso nossa tabela de produtos estará criada:
+### 7. Rodar migration, após isso nossa tabela de produtos estará criada:
 ```
 php artisan migrate
 ```
 
-8. Editar Model da tabela de produtos, para informar que os atributos “nome, descricao e imagem” podem ser ser atibuídos aos criar ou atualizar nosso modelo, faça isto no arquivo “app/Models/Produto.php”:
+### 8. Editar Model da tabela de produtos, para informar que os atributos “nome, descricao e imagem” podem ser ser atibuídos aos criar ou atualizar nosso modelo, faça isto no arquivo “app/Models/Produto.php”:
 ```php
 class Produto extends Model
 {
@@ -84,12 +84,12 @@ class Produto extends Model
 
  
 
-9. Criar controller dos produtos, no cmd rodar:
+### 9. Criar controller dos produtos, no cmd rodar:
 ```
 php artisan make:controller Api/ProdutoController
 ```
 
-10. Adicinar rota no arquivo “routes/api.php”;
+### 10. Adicinar rota no arquivo “routes/api.php”;
 ```php
 use App\Http\Controllers\Api\ProdutoController;
 Route::group([], function () {
