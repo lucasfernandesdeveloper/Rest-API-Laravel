@@ -6,12 +6,16 @@ Para saber mais: [O que é uma API REST? | IBM](https://www.ibm.com/br-pt/topics
 
 Para criar esta API Rest nós iremos simular um ecommerce, onde o administradr poderá: 
 
-- <code style="color:green"> GET </code>  | Visualizar produtos existentes
-- <code style="color:yellow"> POST </code>| Criar novos produtos
-- <code style="color:blue"> PUT </code>   | Atualizar seus produtos
-- <code style="color:red"> DELETE </code> | Deletar produtos
+- <code style="color:green"> *GET* </code>
+Visualizar produtos existentes
+- <code style="color:yellow"> *POST* </code>
+Criar novos produtos
+- <code style="color:blue"> *PUT* </code>
+Atualizar seus produtos
+- <code style="color:red"> *DELETE* </code>
+Deletar produtos
 
-Requisitos  
+### Requisitos  
 
 - Composer instalado no computador (Obrigatorio). Para instalar o composer: [Composer (getcomposer.org)](https://getcomposer.org/download/)
 - Editor de código, neste tutorial usaremos o Visual Studio Code (Obrigatório). Para instalar o VS code: [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
