@@ -1,11 +1,7 @@
 # Rest-API-Laravel
 
-# API
-
 As APIs REST se comunicam por meio de solicitações HTTP para executar funções padrão de banco de dados, como criar, ler, atualizar e excluir registros (também conhecidos como CRUD) em um recurso.
-
 Por exemplo, uma API REST usaria uma solicitação GET para recuperar um registro. Uma solicitação POST cria um novo registro. Uma solicitação PUT atualiza um registro, e uma solicitação DELETE exclui um. Todos os métodos HTTP podem ser usados em chamadas de API. Uma API REST bem projetada é semelhante a um site em execução em um navegador web com funcionalidade HTTP integrada.
-
 Para saber mais: [O que é uma API REST? | IBM](https://www.ibm.com/br-pt/topics/rest-apis)
 
 Para criar esta api rest nós iremos simular um ecommerce, onde o administradr poderá 
@@ -18,28 +14,25 @@ Para criar esta api rest nós iremos simular um ecommerce, onde o administradr p
 Requisitos  
 
 - Composer instalado no computador (Obrigatorio). Para instalar o composer: [Composer (getcomposer.org)](https://getcomposer.org/download/)
-
 - Editor de código, neste tutorial usaremos o Visual Studio Code (Obrigatório). Para instalar o VS code: [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
-
 - Banco de dados e gerenciador de banco de dados, neste tutorial utilizaremos o mysqli e o PhpMyadmin do Xampp. Para intalar o Xampp: [Download XAMPP (apachefriends.org)](https://www.apachefriends.org/download.html)
-
 - Postman  para testar a API (Opcional). Para instalar o Postman: [Download Postman | Get Started for Free](https://www.postman.com/downloads/)
 
 1. Para iniciar, vamos criar um projeto laravel no nosso computador, através do comando 
 
-```jsx
+```
 composer create-project laravel/laravel ecommerce-example-api
 ```
 
 2. Entrar na pasta do projeto pelo terminal
 
-```jsx
+```
 cd ecommerce-example-api
 ```
 
 3. Abrir o projeto no editor de código 
 
-```jsx
+```
 code .
 ```
 
@@ -56,7 +49,7 @@ DB_PASSWORD=
 
 5. Criar Model do produto juntamente com a migration, no CMD:
 
-```jsx
+```
 php artisan make:model Produto -m
 ```
 
@@ -78,7 +71,7 @@ php artisan make:model Produto -m
 
 7. Rodar migration, após isso nossa tabela de produtos estará criada:
 
-```jsx
+```
 php artisan migrate
 ```
 
@@ -97,7 +90,7 @@ class Produto extends Model
 
 9. Criar controller dos produtos, no cmd rodar:
 
-```jsx
+```
 php artisan make:controller Api/ProdutoController
 ```
 
@@ -131,7 +124,7 @@ como resultado.
 
 12. Criar request (Referente ao envio de dados do cliente para o servidor) para armazenar os produtos no banco de dados, digitar no CMD: 
 
-```jsx
+```
 php artisan make:request StoreProdutoRequest
 ```
 
