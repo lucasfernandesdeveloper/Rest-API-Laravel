@@ -6,7 +6,7 @@ Para saber mais: [O que é uma API REST? | IBM](https://www.ibm.com/br-pt/topics
 
 Para criar esta API Rest nós iremos simular um ecommerce, onde o administradr poderá: 
 
-- <code style="color:green"> GET </code> | Visualizar produtos existentes
+- <span style="color:green"> GET </span> | Visualizar produtos existentes
 - POST | Criar novos produtos
 - PUT | Atualizar seus produtos
 - DELETE | Deletar produtos
