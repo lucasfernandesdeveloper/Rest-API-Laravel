@@ -4,12 +4,12 @@ As APIs REST se comunicam por meio de solicitações HTTP para executar funçõe
 Por exemplo, uma API REST usaria uma solicitação GET para recuperar um registro. Uma solicitação POST cria um novo registro. Uma solicitação PUT atualiza um registro, e uma solicitação DELETE exclui um. Todos os métodos HTTP podem ser usados em chamadas de API. Uma API REST bem projetada é semelhante a um site em execução em um navegador web com funcionalidade HTTP integrada.
 Para saber mais: [O que é uma API REST? | IBM](https://www.ibm.com/br-pt/topics/rest-apis)
 
-Para criar esta api rest nós iremos simular um ecommerce, onde o administradr poderá 
+Para criar esta API Rest nós iremos simular um ecommerce, onde o administradr poderá: 
 
-- Visualizar produtos existentes
-- Criar novos produtos
-- Atualizar seus produtos
-- Deletar produtos
+- GET | Visualizar produtos existentes
+- POST | Criar novos produtos
+- PUT | Atualizar seus produtos
+- DELETE | Deletar produtos
 
 Requisitos  
 
