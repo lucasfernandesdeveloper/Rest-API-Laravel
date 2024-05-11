@@ -98,7 +98,7 @@ Route::group([], function () {
 
 ```
 
-11. Criar o método de index do controller, que dará acesso a todos os produtos da aplicação no arquivo “app/Http/Controllers/Api/ProdutoController.php”:
+### 11. Criar o método de index do controller, que dará acesso a todos os produtos da aplicação no arquivo “app/Http/Controllers/Api/ProdutoController.php”:
 ```
 class ProdutoController extends Controller
 {
@@ -111,12 +111,12 @@ Agora quando acessamos “[localhost/ecommerce-example-api/public/api/produtos](
 **"Index Produtos”** 
 como resultado.
 
-12. Criar request (Referente ao envio de dados do cliente para o servidor) para armazenar os produtos no banco de dados, digitar no CMD: 
+### 12. Criar request (Referente ao envio de dados do cliente para o servidor) para armazenar os produtos no banco de dados, digitar no CMD: 
 ```
 php artisan make:request StoreProdutoRequest
 ```
 
-13. Permitir o usuário inserir dados, aqui permitiremos que qualquer usuário faça requests, mas em uma aplicação real nós utilisariamos de lógicas para permitira que apenas usuários com permissão fizessem requests. No arquivo “app/Http/Requests/StoreProdutoRequest.php” vamos substituir o false pelo true: 
+### 13. Permitir o usuário inserir dados, aqui permitiremos que qualquer usuário faça requests, mas em uma aplicação real nós utilisariamos de lógicas para permitira que apenas usuários com permissão fizessem requests. No arquivo “app/Http/Requests/StoreProdutoRequest.php” vamos substituir o false pelo true: 
 ```
     public function authorize(): bool
     {
@@ -124,7 +124,7 @@ php artisan make:request StoreProdutoRequest
     }
 ```
 
-14. Criar regras de validação para a inserção de novos dados: app\Http\Requests\StoreProdutoRequest:
+### 14. Criar regras de validação para a inserção de novos dados: app\Http\Requests\StoreProdutoRequest:
 ```php
     public function rules(): array
     {
@@ -136,7 +136,7 @@ php artisan make:request StoreProdutoRequest
     }
 ```
 
-15. Criar método para armazenamento dos dados, no nosso controller adicionar: 
+### 15. Criar método para armazenamento dos dados, no nosso controller adicionar: 
 ```
 use App\Http\Requests\StoreProdutoRequest;
     public function store(StoreProdutoRequest $request){
@@ -155,7 +155,7 @@ Agora, ao enviarmos um json para a rota “[localhost/ecommerce-example-api/publ
 ```
 Salvaremos elas no banco de dados.
 
-16. Criar controller de update, para atualizar os nossos dados. Agora, ao enviarmos um json para a rota “[localhost/ecommerce-example-api/public/api/produtos](http://localhost/ecommerce-example-api/public/api/produtos)/{id}”, com o método PUT, passando as informações do produto novo: 
+### 16. Criar controller de update, para atualizar os nossos dados. Agora, ao enviarmos um json para a rota “[localhost/ecommerce-example-api/public/api/produtos](http://localhost/ecommerce-example-api/public/api/produtos)/{id}”, com o método PUT, passando as informações do produto novo: 
 ```php
 {
 	"nome": "Produto 2",
@@ -165,12 +165,12 @@ Salvaremos elas no banco de dados.
 ```
 Atualizaremos as informações no banco de dados.
 
-17. Criar resource para mostrar todos os produtos, no CMD: 
+### 17. Criar resource para mostrar todos os produtos, no CMD: 
 ```jsx
 php artisan make:resource ProdutoResource
 ```
 
-18. Definir campos que deseja retornar ao requisitar as informações dos produtos no app\Http\Resources\ProductResource;
+### 18. Definir campos que deseja retornar ao requisitar as informações dos produtos no app\Http\Resources\ProductResource;
 ```php
     public function toArray(Request $request): array
     {
@@ -184,14 +184,14 @@ php artisan make:resource ProdutoResource
     }
 ```
 
-19. Colocar o método do index para retornar todos os produtos: 
+### 19. Colocar o método do index para retornar todos os produtos: 
 ```php
     public function index(){
         return ProdutoResource::collection(Produto::all());
     }
 ```
 
-20. Criar o método para deletar um produto 
+### 20. Criar o método para deletar um produto 
 ```php
     public function destroy(Produto $produto){
         $produto->delete();
